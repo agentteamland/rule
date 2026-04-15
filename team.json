@@ -1,0 +1,5 @@
+{
+  "name": "rule-skill",
+  "version": "1.0.0",
+  "description": "Coding rule management with guided wizard. 3 scopes: project, global, team."
+}
