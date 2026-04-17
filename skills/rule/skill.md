@@ -16,10 +16,10 @@ Analyzes a rule expressed in Turkish and writes it to the correct file in Englis
 |------|--------|------|
 | *(none)* | Project `.claude/` directory | Rules specific to this project (default) |
 | `--global` | `~/.claude/rules/` | Personal rules that apply to every project |
-| `--team` | `~/.claude/repos/mkurak/{team}/` files | Agent or rule files in the team repo |
+| `--team` | `~/.claude/repos/agentteamland/{team}/` files | Agent or rule files in the team repo |
 
 **`--team` active team detection:**
-- The `readlink` result of symlinks under `~/.claude/agents/` is used to extract `~/.claude/repos/mkurak/{team-name}/`
+- The `readlink` result of symlinks under `~/.claude/agents/` is used to extract `~/.claude/repos/agentteamland/{team-name}/`
 - If there is only one team, it is used automatically
 - If there are multiple teams, the user is asked via AskUserQuestion
 
@@ -56,8 +56,8 @@ The target is determined based on what the rule pertains to:
 
 | Related area | File |
 |-------------|------|
-| An agent's knowledge base | `~/.claude/repos/mkurak/{team}/agents/{agent}.md` |
-| Team-wide rule | `~/.claude/repos/mkurak/{team}/rules/{topic}.md` |
+| An agent's knowledge base | `~/.claude/repos/agentteamland/{team}/agents/{agent}.md` |
+| Team-wide rule | `~/.claude/repos/agentteamland/{team}/rules/{topic}.md` |
 
 If it applies to more than one but not all, ask the user.
 
@@ -103,7 +103,7 @@ what types of changes? Be specific.}
 ### 7. Git Push for Team Scope
 For rules written with `--team`:
 ```bash
-cd ~/.claude/repos/mkurak/{team-name}
+cd ~/.claude/repos/agentteamland/{team-name}
 git add -A
 git commit -m "rule: {kebab-case-rule-id}"
 git push

@@ -5,10 +5,10 @@ Claude Code skills for managing coding rules and standards. Write rules in natur
 ## Installation
 
 ```bash
-/team install https://github.com/mkurak/agent-workshop-rule-skill.git
+/team install https://github.com/agentteamland/rule.git
 ```
 
-> Requires [Agent Team Manager](https://github.com/mkurak/agent-workshop-agent-team-manager-skill) to be installed first.
+> Requires [Agent Team Manager](https://github.com/agentteamland/team-manager) to be installed first.
 
 ## Usage
 
